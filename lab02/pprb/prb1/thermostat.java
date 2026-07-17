@@ -1,4 +1,4 @@
-package lab02.pprb.prb1;
+import java.util.Scanner;
 
 public class Thermostat {
     private String location;
@@ -51,6 +51,6 @@ public class Thermostat {
             System.out.println(thermostat2.location + " Temperature: " + thermostat2.getTemperature());
         }
 
-        System.out.println("Active count: " + Thermostat.getActiveCount());
+        System.out.println(thermostat1.location + " Active count: " + Thermostat.getActiveCount());
     }
 }
