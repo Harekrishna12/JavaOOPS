@@ -1,13 +1,13 @@
 package lab02.pprb.prb1;
 
-public class thermostat {
+public class Thermostat {
     private String location;
     private int temperature;
     private static final int MIN = 16;
     private static final int MAX = 30;
     private static int activeCount = 0;
 
-    public thermostat(String location, int startTemp) {
+    public Thermostat(String location, int startTemp) {
         this.location = location;
         this.temperature = (startTemp >= MIN && startTemp <= MAX) ? startTemp : 22;
         activeCount++;
@@ -38,8 +38,8 @@ public class thermostat {
     }
 
     public static void main(String[] args) {
-        thermostat thermostat1 = new thermostat("Living Room", 22);
-        thermostat thermostat2 = new thermostat("Bedroom", 25);
+        Thermostat thermostat1 = new Thermostat("Living Room", 22);
+        Thermostat thermostat2 = new Thermostat("Bedroom", 25);
 
         for (int i = 0; i < 10; i++) {
             thermostat1.raise();
@@ -51,6 +51,6 @@ public class thermostat {
             System.out.println("Temperature: " + thermostat1.getTemperature());
         }
 
-        System.out.println("Active count: " + thermostat.getActiveCount());
+        System.out.println("Active count: " + Thermostat.getActiveCount());
     }
 }
