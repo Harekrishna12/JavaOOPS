@@ -17,7 +17,7 @@ public class Thermostat {
         if (temperature < MAX) {
             temperature++;
         } else {
-            System.out.println("Already at maximum (30)");
+            System.out.println(location + ": Already at maximum (30)");
         }
     }
 
@@ -25,7 +25,7 @@ public class Thermostat {
         if (temperature > MIN) {
             temperature--;
         } else {
-            System.out.println("Already at minimum (16)");
+            System.out.println(location + ": Already at minimum (16)");
         }
     }
 
@@ -43,12 +43,12 @@ public class Thermostat {
 
         for (int i = 0; i < 10; i++) {
             thermostat1.raise();
-            System.out.println("Temperature: " + thermostat1.getTemperature());
+            System.out.println(thermostat1.location + " Temperature: " + thermostat1.getTemperature());
         }
 
         for (int i = 0; i < 20; i++) {
-            thermostat1.lower();
-            System.out.println("Temperature: " + thermostat1.getTemperature());
+            thermostat2.lower();
+            System.out.println(thermostat2.location + " Temperature: " + thermostat2.getTemperature());
         }
 
         System.out.println("Active count: " + Thermostat.getActiveCount());
