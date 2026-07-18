@@ -49,7 +49,7 @@ public class Thermostat {
         }
 
         for (int i = 0; i < 20; i++) {
-            if (!-thermostat2.lower()) {
+            if (!thermostat2.lower()) {
                 break;
             }
             System.out.println(thermostat2.location + " Temperature: " + thermostat2.getTemperature());
