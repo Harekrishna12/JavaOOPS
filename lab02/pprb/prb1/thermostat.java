@@ -21,11 +21,13 @@ public class Thermostat {
         }
     }
 
-    public void lower() {
+    public boolean lower() {
         if (temperature > MIN) {
             temperature--;
+            return true;
         } else {
             System.out.println(location + ": Already at minimum (16)");
+            return false;
         }
     }
 
@@ -47,7 +49,9 @@ public class Thermostat {
         }
 
         for (int i = 0; i < 20; i++) {
-            thermostat2.lower();
+            if (!-thermostat2.lower()) {
+                break;
+            }
             System.out.println(thermostat2.location + " Temperature: " + thermostat2.getTemperature());
         }
 
